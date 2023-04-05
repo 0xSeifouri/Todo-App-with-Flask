@@ -1,0 +1,34 @@
+{% extends '_base.html' %}
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="container mt-5 border border-dark">
+            <h2>Create</h2>
+            <form method="post" , class="container mt-5">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="title" placeholder="Title">
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Add</button>
+            </form>
+        </div>
+        <div class="container mt-5 border border-dark">
+            <h2>List</h2>
+            {% for todo in todos %}
+                <div class="container mt-5 border border-dark">
+                    <h3>{{ todo.title|title }}</h3>
+                    <small>{{ todo.date.strftime('%Y-%m-%d') }}</small>
+                    <div class="container" dir="rtl">
+                        <a href="{{ url_for ('delete_view', pk=todo.id) }}" class="btn btn-dark">Complete</a>
+                        <a href="{{ url_for ('update_view', pk=todo.id) }}" class="btn btn-dark">Update</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+

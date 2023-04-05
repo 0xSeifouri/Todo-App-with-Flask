@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+
+{% block title %}Edit{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="container mt-5 border border-dark">
+            <h2>Edit</h2>
+            <form method="post" class="container mt-5">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="title" placeholder="Title">
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Update</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+

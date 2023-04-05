@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Add Todo
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5 border border-dark">
+        <h3>Add New Record</h3>
+        <form method="post" , class="container mt-5">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="title" placeholder="Title">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="text" placeholder="Text">
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Add</button>
+        </form>
+    </div>
+{% endblock %}
